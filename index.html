@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>The Cozy Nook - Vacation Rentals</title>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #fef6e4;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background-color: #ff385c; /* Airbnb-style vibrant pink/red */
+        color: white;
+        padding: 12px 25px; /* Smaller padding */
+        text-align: left; /* Align to left */
+        font-size: 20px; /* Smaller font size */
+        font-weight: bold;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      header h1 {
+        margin: 0;
+        font-size: 24px;
+      }
+      nav {
+        display: flex;
+        justify-content: center;
+        background: white;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+      nav a {
+        color: #2c3e50;
+        text-decoration: none;
+        font-weight: 600;
+        padding: 12px 18px;
+        margin: 0 10px;
+        border-radius: 8px;
+        transition: all 0.3s;
+      }
+      nav a:hover {
+        background: #ff385c;
+        color: white;
+        transform: translateY(-3px);
+      }
+      .vacation-rent-container {
+        text-align: center;
+        margin-top: 40px;
+      }
+      .listing-card {
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        display: inline-block;
+        max-width: 350px;
+        margin: 20px;
+      }
+      .listing-card img {
+        width: 100%;
+        height: 250px;
+        border-radius: 12px;
+        object-fit: cover;
+      }
+      .listing-price {
+        font-weight: bold;
+        color: #ff385c;
+        font-size: 18px;
+        margin: 10px 0;
+      }
+      .listing-details {
+        color: #2c3e50;
+        font-size: 14px;
+        margin-top: 5px;
+      }
+      .listing-type {
+        background-color: #ff385c;
+        color: white;
+        padding: 5px 12px;
+        border-radius: 20px;
+        display: inline-block;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+      .rent-info {
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        display: inline-block;
+        max-width: 350px;
+        margin: 20px;
+      }
+      .rent-info img {
+        width: 100%;
+        border-radius: 12px;
+      }
+      .rent-price {
+        font-weight: bold;
+        color: #ff385c;
+      }
+      button {
+        background-color: #ff385c;
+        color: white;
+        border: none;
+        padding: 12px 18px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+      a.button:hover {
+        background-color: #e31c5f;
+        transform: translateY(-2px);
+        text-decoration: none; 
+        color: white; 
+      }
+      footer {
+        background-color: #2c3e50;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        margin-top: 40px;
+        font-size: 14px;
+      }
+      .gallery {
+        text-align: center;
+        margin-top: 40px;
+      }
+      .gallery h2 {
+        text-align: center;
+      }
+      .gallery img {
+        display: inline-block;
+        width: 300px;
+        height: 200px;
+        object-fit: cover;
+        margin: 15px;
+        border-radius: 12px;
+        transition: transform 0.3s ease-in-out;
+      }
+      .gallery img:hover {
+        transform: scale(1.1);
+      }
+      .hero-section {
+        text-align: center;
+        padding: 60px 20px;
+        background-color: rgba(255, 56, 92, 0.05);
+        margin-bottom: 20px;
+      }
+      .hero-section h2 {
+        font-size: 32px;
+        color: #2c3e50;
+        margin-bottom: 20px;
+      }
+      .hero-section p {
+        font-size: 18px;
+        color: #777;
+        max-width: 800px;
+        margin: 0 auto 30px;
+      }
+
+      .carousel {
+        position: relative;
+        width: 100%;
+        max-width: 800px;
+        margin: auto;
+        overflow: hidden;
+        border-radius: 12px;
+      }
+      .carousel-inner {
+        display: flex;
+        width: 300%; 
+        animation: slide 25s infinite; 
+      }
+      .carousel-item {
+        width: 100%;
+        flex-shrink: 0;
+      }
+      .carousel-item img {
+        width: 100%;
+        height: 400px;
+        object-fit: contain;
+      }
+
+      @keyframes slide {
+        0% {
+          transform: translateX(0%);
+        }
+        33.33% {
+          transform: translateX(-100%);
+        }
+        66.66% {
+          transform: translateX(-200%);
+        }
+        100% {
+          transform: translateX(0%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>The Cozy Nook</h1>
+    </header>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="Listings.html">Listings</a>
+      <a href="Contact.html">Contact</a>
+      <a href="About.html">About</a>
+      <a href="Sign-In.html">Sign In</a>
+      <a href="Gallery.html">Gallery</a>
+      <a href="Booking.html">Booking</a>
+      <a href="SiteMap.html">Site Map</a>
+    </nav>
+
+    <section class="hero-section">
+      <h2>Your Home Away From Home</h2>
+      <p>Experience comfort and convenience in the heart of Manila. Perfect for business travelers and weekend getaways.</p>
+      <button type="button"><a href="Listings.html">Explore Our Rentals</a></button>
+    </section>
+
+    <section class="vacation-rent-container">
+      <h2>Featured Stays</h2>
+
+      <div class="listing-card">
+        <div class="listing-type">Weekday Stay</div>
+        <img src="6.jpg" alt="Cozy Apartment" />
+        <p><b>Mandaluyong, Manila</b></p>
+        <p class="listing-price">PHP 1,800/night</p>
+        <div class="listing-details">
+          <p><b>Available:</b> Monday to Thursday</p>
+          <p>Check-in: 2:00 PM | Check-out: 12:00 PM</p>
+        </div>
+        <button type="button">Book Weekday Stay</button>
+      </div>
+
+      <div class="listing-card">
+        <div class="listing-type">Weekend Stay</div>
+        <img src="8.jpg" alt="Cozy Apartment" />
+        <p><b>Mandaluyong, Manila</b></p>
+        <p class="listing-price">PHP 2,000/night</p>
+        <div class="listing-details">
+          <p><b>Available:</b> Friday to Sunday</p>
+          <p>Check-in: 2:00 PM | Check-out: 12:00 PM</p>
+        </div>
+        <button type="button">Book Weekend Stay</button>
+      </div>
+    </section>
+
+    <section class="gallery">
+      <h2>Gallery</h2>
+      <div class="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item">
+            <img src="7.jpg" alt="Gallery Image 1" />
+          </div>
+          <div class="carousel-item">
+            <img src="8.jpg" alt="Gallery Image 2" />
+          </div>
+          <div class="carousel-item">
+            <img src="Bedroom.jpg" alt="Gallery Image 3" />
+          </div>
+        </div>
+      </div>
+      <div class="gallery-images">
+        <img src="1.jpg" alt="Gallery Image 1" />
+        <img src="2.jpg" alt="Gallery Image 2" />
+        <img src="Bedroom.jpg" alt="Gallery Image 3" />
+      </div>
+    </section>
+
+    <footer>
+      <p>
+        &copy; 2025 The Cozy Nook. All Rights Reserved. Developed by Group 9.
+      </p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery - The Cozy Nook</title>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #fef6e4;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background-color: #ff385c;
+        color: white;
+        padding: 12px 25px;
+        text-align: left;
+        font-size: 20px;
+        font-weight: bold;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      header h1 {
+        margin: 0;
+        font-size: 24px;
+      }
+
+      nav {
+        display: flex;
+        justify-content: center;
+        background: white;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      nav a {
+        color: #2c3e50;
+        text-decoration: none;
+        font-weight: 600;
+        padding: 12px 18px;
+        margin: 0 10px;
+        border-radius: 8px;
+        transition: all 0.3s;
+      }
+
+      nav a:hover {
+        background: #ff385c;
+        color: white;
+        transform: translateY(-3px);
+      }
+
+      .gallery h2 {
+        text-align: center;
+      }
+
+      .gallery-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 10px;
+      }
+
+      .gallery-container img {
+        width: 200px;
+        height: auto;
+        object-fit: cover;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: transform 0.3s;
+      }
+
+      .gallery img:hover {
+        transform: scale(1.1);
+      }
+
+      .lightbox {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+      }
+
+      .lightbox img {
+        max-width: 80%;
+        max-height: 80%;
+        border-radius: 10px;
+      }
+
+      .lightbox:target {
+        display: flex;
+      }
+
+      .lightbox .close {
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        font-size: 40px;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .lightbox .close:hover {
+        color: #ff7f50;
+      }
+
+      footer {
+        background-color: #2c3e50;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        margin-top: 40px;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>The Cozy Nook</h1>
+    </header>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="Listings.html">Listings</a>
+      <a href="Contact.html">Contact</a>
+      <a href="About.html">About</a>
+      <a href="Sign-In.html">Sign In</a>
+      <a href="Gallery.html">Gallery</a>
+      <a href="Booking.html">Booking</a>
+      <a href="SiteMap.html">Site Map</a>
+    </nav>
+
+    <div class="gallery">
+      <h2>Image Gallery</h2>
+      <div class="gallery-container">
+        <a href="#img1"><img src="Bathroom.jpg" alt="Bathroom" /></a>
+        <a href="#img2"><img src="Bedroom.jpg" alt="Bedroom" /></a>
+        <a href="#img3"><img src="Game room.jpg" alt="Game Room" /></a>
+        <a href="#img4"><img src="Kitchen.jpg" alt="Kitchen" /></a>
+        <a href="#img5"><img src="Living Room.jpg" alt="Living Room" /></a>
+        <a href="#img6"><img src="Lounge.jpg" alt="Lounge" /></a>
+        <a href="#img7"
+          ><img src="rent vacation 1.jpg" alt="Vacation Rental"
+        /></a>
+      </div>
+    </div>
+
+    <!-- Lightboxes with Close Button -->
+    <div id="img1" class="lightbox">
+      <a href="#" class="close">&times;</a>
+      <img src="Bathroom.jpg" alt="Bathroom" />
+    </div>
+
+    <div id="img2" class="lightbox">
+      <a href="#" class="close">&times;</a>
+      <img src="Bedroom.jpg" alt="Bedroom" />
+    </div>
+
+    <div id="img3" class="lightbox">
+      <a href="#" class="close">&times;</a>
+      <img src="Game room.jpg" alt="Game Room" />
+    </div>
+
+    <div id="img4" class="lightbox">
+      <a href="#" class="close">&times;</a>
+      <img src="Kitchen.jpg" alt="Kitchen" />
+    </div>
+
+    <div id="img5" class="lightbox">
+      <a href="#" class="close">&times;</a>
+      <img src="Living Room.jpg" alt="Living Room" />
+    </div>
+
+    <div id="img6" class="lightbox">
+      <a href="#" class="close">&times;</a>
+      <img src="Lounge.jpg" alt="Lounge" />
+    </div>
+
+    <div id="img7" class="lightbox">
+      <a href="#" class="close">&times;</a>
+      <img src="rent vacation 1.jpg" alt="Vacation Rental" />
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>
+        &copy; 2025 The Cozy Nook. All Rights Reserved. Developed by Group 9.
+      </p>
+    </footer>
+  </body>
+</html>
