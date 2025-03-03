@@ -6,78 +6,121 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
     <title>About Us - The Cozy Nook</title>
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
       body {
         font-family: "Poppins", sans-serif;
         background-color: #fef6e4;
         margin: 0;
         padding: 0;
       }
+
       header {
-        background-color: #FF385C; 
+        background-color: #ff385c;
         color: white;
-        padding: 12px 25px; 
-        text-align: left; 
-        font-size: 20px; 
+        padding: 15px;
+        text-align: center;
+        font-size: 20px;
         font-weight: bold;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       }
-      header h1 {
-        margin: 0;
-        font-size: 24px;
-      }
+
       nav {
         display: flex;
-        justify-content: center;
+        overflow-x: auto;
+        white-space: nowrap;
         background: white;
-        padding: 15px;
-        border-radius: 10px;
+        padding: 10px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       }
+
       nav a {
         color: #2c3e50;
         text-decoration: none;
         font-weight: 600;
-        padding: 12px 18px;
-        margin: 0 10px;
+        padding: 12px 16px;
+        margin: 0 5px;
         border-radius: 8px;
         transition: all 0.3s;
+        flex-shrink: 0;
       }
+
       nav a:hover {
-        background: #FF385C;
+        background: #ff385c;
         color: white;
-        transform: translateY(-3px);
       }
+
       .about-section {
-        max-width: 800px;
-        margin: 40px auto;
+        max-width: 90%;
+        margin: 30px auto;
         background: white;
-        padding: 30px;
+        padding: 20px;
         border-radius: 12px;
         box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
         text-align: center;
       }
+
       .about-section h2 {
-        color: #FF385C;
-        margin-bottom: 20px;
+        color: #ff385c;
+        margin-bottom: 15px;
+        font-size: 24px;
       }
+
       .about-section p {
-        line-height: 1.8;
+        line-height: 1.6;
         color: #555;
         font-size: 16px;
         text-align: justify;
       }
+
       footer {
         background-color: #2c3e50;
         color: white;
         text-align: center;
-        padding: 20px 0;
-        margin-top: 40px;
+        padding: 15px;
+        margin-top: 30px;
         font-size: 14px;
+      }
+
+      @media (max-width: 768px) {
+        header {
+          font-size: 18px;
+          padding: 10px;
+        }
+
+        nav {
+          padding: 8px;
+        }
+
+        nav a {
+          font-size: 14px;
+          padding: 10px;
+        }
+
+        .about-section {
+          padding: 15px;
+        }
+
+        .about-section h2 {
+          font-size: 20px;
+        }
+
+        .about-section p {
+          font-size: 14px;
+        }
+
+        footer {
+          font-size: 12px;
+        }
       }
     </style>
   </head>
@@ -100,7 +143,7 @@
     <section class="about-section">
       <h2>About Us</h2>
       <p>
-        Welcome to <b>The Cozy Nook</b>, your go-to destination for relaxing and comfortable vacation rentals. Our background and goal is to provide travelers with unique and memorable experiences through well-curated, beautifully designed suites and hotels that feel like home.
+        Welcome to <b>The Cozy Nook</b>, your go-to destination for relaxing and comfortable vacation rentals. Our goal is to provide travelers with unique and memorable experiences through well-curated, beautifully designed suites and hotels that feel like home.
       </p>
       <p>
         Whether you’re visiting for business, leisure, or a bit of both, The Cozy Nook offers the perfect blend of comfort, style, and convenience. Each of our properties is thoughtfully selected to ensure guests experience the best of what the area has to offer.
@@ -109,7 +152,7 @@
         Established by a passionate group of travel enthusiasts, <b>The Cozy Nook</b> was built on the belief that every trip deserves a home that enhances the adventure. Our team works tirelessly to make sure your stay is seamless and unforgettable.
       </p>
       <p>
-        Thank you for choosing <b>The Cozy Nook</b>. We look forward to make your traveling experience or stay-in comfortable and memorable!
+        Thank you for choosing <b>The Cozy Nook</b>. We look forward to making your travel experience comfortable and memorable!
       </p>
     </section>
 
@@ -117,11 +160,7 @@
       <p>
         &copy; 2025 The Cozy Nook. All Rights Reserved. Developed by Group 9.
       </p>
-      <p>BAUTISTA, Paul Ryan S.
-        BORJA, Edmund Huw Jacob B.
-        LABAO, Dwayne Anton C.
-        OLIMPIADA, Edrix G.
-        SULAYAO, Marcus Benedict C.</p>
+      <p>BAUTISTA, Paul Ryan S. | BORJA, Edmund Huw Jacob B. | LABAO, Dwayne Anton C. | OLIMPIADA, Edrix G. | SULAYAO, Marcus Benedict C.</p>
     </footer>
   </body>
 </html>
